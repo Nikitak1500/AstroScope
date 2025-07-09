@@ -1,6 +1,5 @@
 package com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.screen.section
 
-import android.text.Layout.Alignment
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,19 +19,14 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.R
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.domain.model.SectionType
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.BackgroundColor
-import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.PrimaryColor
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.SecondaryColor
-import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.onPrimaryColor
+import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.TextColor
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.viewmodel.HoroscopeDetailViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -54,16 +48,16 @@ fun SectionDetailScreen(
                 colors = TopAppBarColors(
                     containerColor = BackgroundColor,
                     scrolledContainerColor = BackgroundColor,
-                    navigationIconContentColor = onPrimaryColor,
+                    navigationIconContentColor = TextColor,
                     titleContentColor = BackgroundColor,
-                    actionIconContentColor = onPrimaryColor
+                    actionIconContentColor = TextColor
                 ),
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
                         Icon(
                             imageVector = Icons.Default.ArrowBack,
                             contentDescription = "Back",
-                            tint = onPrimaryColor
+                            tint = TextColor
                         )
                     }
                 }
@@ -100,7 +94,7 @@ fun SectionDetailScreen(
                         Text(
                             text = it.fullText,
                             fontWeight = FontWeight.Bold,
-                            color = onPrimaryColor
+                            color = TextColor
                         )
                     }
                 }

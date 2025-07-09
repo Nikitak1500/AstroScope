@@ -5,7 +5,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,8 +24,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.R
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.BackgroundColor
-import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.PrimaryColor
-import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.onPrimaryColor
+import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.TextColor
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.viewmodel.MainViewModel
 
 @Composable
@@ -58,7 +56,7 @@ fun MainScreen(
             )
             Text(
                 text = "AstroScope",
-                color = onPrimaryColor,
+                color = TextColor,
                 fontWeight = FontWeight.Bold,
                 fontSize = 48.sp
             )
@@ -68,7 +66,7 @@ fun MainScreen(
         )
         Text(
             text = "Select Your Zodiac Sign",
-            color = onPrimaryColor,
+            color = TextColor,
             fontSize = 32.sp
         )
         Spacer(

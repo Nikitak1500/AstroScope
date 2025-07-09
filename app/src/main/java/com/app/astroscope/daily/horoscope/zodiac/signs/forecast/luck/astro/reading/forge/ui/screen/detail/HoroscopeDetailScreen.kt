@@ -32,11 +32,10 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.domain.model.SectionType
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.BackgroundColor
-import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.PrimaryColor
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.SecondaryColor
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.SurfaceColor
-import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.onPrimaryColor
-import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.onSurfaceColor
+import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.TextColor
+import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.theme.SurfaceTextColor
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.ui.viewmodel.HoroscopeDetailViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -60,16 +59,16 @@ fun HoroscopeDetailScreen(
                     colors = TopAppBarColors(
                         containerColor = BackgroundColor,
                         scrolledContainerColor = BackgroundColor,
-                        navigationIconContentColor = onPrimaryColor,
+                        navigationIconContentColor = TextColor,
                         titleContentColor = BackgroundColor,
-                        actionIconContentColor = onPrimaryColor
+                        actionIconContentColor = TextColor
                     ),
                     navigationIcon = {
                         IconButton(onClick = onBackClick) {
                             Icon(
                                 imageVector = Icons.Default.ArrowBack,
                                 contentDescription = "Back",
-                                tint = onPrimaryColor
+                                tint = TextColor
                             )
                         }
                     }
@@ -102,7 +101,7 @@ fun HoroscopeDetailScreen(
                     Text(
                         text = horoscope.sign.period,
                         fontSize = 24.sp,
-                        color = onPrimaryColor
+                        color = TextColor
                     )
 
                     Spacer(
@@ -128,7 +127,7 @@ fun HoroscopeDetailScreen(
                                 )
                                 Text(
                                     text = section.shortText,
-                                    color = onSurfaceColor
+                                    color = SurfaceTextColor
                                 )
                             }
                         }
