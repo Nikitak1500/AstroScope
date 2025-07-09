@@ -35,10 +35,15 @@ fun AppNavGraph(navController: NavHostController) {
             route = Screen.Detail.route,
             arguments = listOf(navArgument("signId") { type = NavType.StringType })
         ) {
-            HoroscopeDetailScreen { sectionType ->
-                val signId = it.arguments?.getString("signId")!!
-                navController.navigate(Screen.Section.createRoute(signId, sectionType))
-            }
+            HoroscopeDetailScreen(
+                onSectionClick = { sectionType ->
+                    val signId = it.arguments?.getString("signId")!!
+                    navController.navigate(Screen.Section.createRoute(signId, sectionType))
+                },
+                onBackClick = {
+                    navController.popBackStack()
+                }
+            )
         }
         composable(
             route = Screen.Section.route,
@@ -49,7 +54,9 @@ fun AppNavGraph(navController: NavHostController) {
         ) { backStackEntry ->
             val signId = backStackEntry.arguments?.getString("signId")!!
             val type = SectionType.valueOf(backStackEntry.arguments?.getString("sectionType")!!)
-            SectionDetailScreen(signId, type)
+            SectionDetailScreen(signId, type) {
+                navController.popBackStack()
+            }
         }
     }
 }

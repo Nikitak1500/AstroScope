@@ -1,5 +1,6 @@
 package com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.data.datasource
 
+import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.R
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.domain.model.Horoscope
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.domain.model.HoroscopeSection
 import com.app.astroscope.daily.horoscope.zodiac.signs.forecast.luck.astro.reading.forge.domain.model.SectionType
@@ -8,21 +9,21 @@ import jakarta.inject.Inject
 
 class HoroscopeLocalDataSource @Inject constructor() {
     private val zodiacSigns = listOf(
-    ZodiacSign(1, "Aries", "March 21 – April 20"),
-    ZodiacSign(2, "Taurus", "April 21 – May 21"),
-    ZodiacSign(3, "Gemini", "May 22 – June 21"),
+    ZodiacSign(1, "Aries", "March 21 – April 20", R.mipmap.ic_aries),
+    ZodiacSign(2, "Taurus", "April 21 – May 21", R.mipmap.ic_taurus),
+    ZodiacSign(3, "Gemini", "May 22 – June 21", R.mipmap.ic_gemini),
 
-    ZodiacSign(4, "Cancer", "June 22 – July 22"),
-    ZodiacSign(5, "Leo", "July 23 – August 21"),
-    ZodiacSign(6, "Virgo", "August 22 – September 23"),
+    ZodiacSign(4, "Cancer", "June 22 – July 22", R.mipmap.ic_cancer),
+    ZodiacSign(5, "Leo", "July 23 – August 21", R.mipmap.ic_leo),
+    ZodiacSign(6, "Virgo", "August 22 – September 23", R.mipmap.ic_virgo),
 
-    ZodiacSign(7, "Libra", "September 24 – October 23"),
-    ZodiacSign(8, "Scorpio", "October 24 – November 22"),
-    ZodiacSign(9, "Sagittarius", "November 23 – December 21"),
+    ZodiacSign(7, "Libra", "September 24 – October 23", R.mipmap.ic_libra),
+    ZodiacSign(8, "Scorpio", "October 24 – November 22", R.mipmap.ic_scorpio),
+    ZodiacSign(9, "Sagittarius", "November 23 – December 21", R.mipmap.ic_sagittarius),
 
-    ZodiacSign(10, "Capricorn", "December 22 – January 20"),
-    ZodiacSign(11, "Aquarius", "January 21 – February 19"),
-    ZodiacSign(12, "Pisces", "February 20 – March 20"),
+    ZodiacSign(10, "Capricorn", "December 22 – January 20", R.mipmap.ic_capricorn),
+    ZodiacSign(11, "Aquarius", "January 21 – February 19", R.mipmap.ic_aquarius),
+    ZodiacSign(12, "Pisces", "February 20 – March 20", R.mipmap.ic_pisces),
     )
 
     private val horoscopes = listOf(

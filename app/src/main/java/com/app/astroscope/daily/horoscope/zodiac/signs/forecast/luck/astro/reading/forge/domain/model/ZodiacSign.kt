@@ -4,4 +4,5 @@ data class ZodiacSign(
     val id: Int,
     val name: String,
     val period: String,
+    val imageId: Int
 )
